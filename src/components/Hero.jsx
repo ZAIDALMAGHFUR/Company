@@ -1,42 +1,24 @@
-import React from "react";
-import hero from "../assets/images/Group o.png";
-const Hero = () => {
-  const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
-  ];
-  return (
-    <section id="home" className="min-h-screen flex py-10 md:flex-row flex-col items-center">
-      <div className="flex-1 flex items-center justify-center h-full">
-        <img src={hero} alt="" className="md:w-11/12 h-full object-cover " />
-      </div>
-      <div className="flex-1">
-        <div className="md:text-left text-center">
-          <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold">
-            <span className="text-cyan-600 md:text-6xl text-5xl">
-              Hello!
-              <br />
-            </span>
-            My Name is <span>Zaid Al MAghfur</span>
-          </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Senior Developer
-          </h4>
-          <button type="button" className="text-white bg-blue-400 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 mt-4">View Portfolio</button>
-          <button type="button" className="border border-lime-50 text-white bg-blue-700 hover:bg-blue-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Download CV</button>
-          <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon) => (
-              <div key={icon} className="text-gray-600 hover:text-white cursor-pointer " >
-                <ion-icon name={icon}></ion-icon>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+import React from 'react'
+import images from '../assets/images/makan.svg'
 
-export default Hero;
+function Hero() {
+    return (
+        <>
+            <div className="w-full h-[32rem] bg-cover opacity-60 bg-black" style={{ backgroundImage: `url(${images})` }}>
+                {/* <span className="w-full h-full absolute opacity-75 bg-black"></span> */}
+                <h1 className='text-center pt-[15rem] text-2xl font-bold lg:text-4xl'>Mau beli Tiket</h1>
+                <h1 className='text-center font-semibold lg:text-3xl mt-5'> Semua Akan mudah jika anda membelinya di sini </h1>
+                <div className='mt-4 text-center animate-bounce text-purple-800 text-2xl'>
+                    <ion-icon name="arrow-down-outline"></ion-icon>
+                </div>
+                <button className="relative inline-flex ml-[11.9rem]  mt-3 items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800 lg:ml-[31rem] 2xl:ml-[44rem]">
+                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0">
+                        See All Tiket
+                    </span>
+                </button>
+            </div >
+        </>
+    )
+}
+
+export default Hero
